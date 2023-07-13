@@ -1,0 +1,46 @@
+//MySql queries
+
+create database universityManagementSystem;  // To create the database
+
+use universityManagementSystem; // every time you open MySql after turning on your computer
+
+create table login(username varchar(25), password varchar(25)); // For Login
+insert into login values('admin', '12345'); 			//Class
+
+create table student( name varchar(40), fname varchar(40), rollno varchar(40), dob varchar(40), address varchar(400), phone varchar(40), email varchar(40), class_x varchar(20),class_xii varchar(20), aadhar varchar(20),
+course varchar(40), branch varchar(40))  // create table to store student info. Used in AddStudent class
+
+create table teacher( name varchar(40), fname varchar(40), empID varchar(40), dob varchar(40), address varchar(400), phone varchar(40), email varchar(40), class_x varchar(20),class_xii varchar(20), aadhar varchar(20),
+qualification varchar(40), department varchar(40))  //// create table to store teacher info. Used in AddTeacher class
+
+create table studentleave(rollno varchar(40), date varchar(50), duration varchar(50)) // table to store leave details of student
+
+create table teacherleave(empID varchar(40), date varchar(50), duration varchar(50))  // table to store leave details of teacher
+
+
+create table subject(rollno varchar(20), semester varchar(20), subject1 varchar(100), subject2 varchar(100), subject3 varchar(100), subject4 varchar(100), subject5 varchar(100)) //Used in various classes
+
+create table marks(rollno varchar(20), semester varchar(20), marks1 varchar(100), marks2 varchar(100), marks3 varchar(100), marks4 varchar(100), marks5 varchar(100)) //Used in various classes
+
+create table fees(course varchar(20), Semester1 varchar(20), Semester2 varchar(20), Semester3 varchar(20), Semester4 varchar(20), Semester5 varchar(20), Semester6 varchar(20), Semester7 varchar(20),Semester8 varchar(20)) //table to store fees of different semesters.
+//Used in multiple classes
+
+//Values for the table above
+insert into fees values("B.Tech", "47500", "45000", "46000", "46500", "47000", "47000", "48000", "48500")
+insert into fees values("M.Tech", "60500", "65000", "66000", "66500", "", "", "", "")
+insert into fees values("B.Sc", "40500", "38000", "36000", "38500", "40000", "40000", "", "")
+insert into fees values("BBA", "20000", "25000", "26000", "25500", "25000", "22000", "", "")
+insert into fees values("BCA", "25000", "28000", "30000", "35500", "35000", "35000", "", "")
+insert into fees values("M.Sc", "40000", "45000", "46000", "48000", "", "", "", "")
+insert into fees values("MBA", "400000", "450000", "500000", "700000", "", "", "", "")
+insert into fees values("MCA", "50000", "55000", "56000", "60000", "", "", "", "")
+insert into fees values("B.Com", "20000", "25000", "26000", "25500", "25000", "22000", "", "")
+insert into fees values("B.A", "20000", "25000", "26000", "25500", "25000", "22000", "", "")
+insert into fees values("M.Com", "40000", "45000", "46000", "45500", "", "", "", "")
+
+create table collegefee(rollno varchar(20), course varchar(20), branch varchar(40), semester varchar(20), total varchar(20)) 
+//table for storing fee details. Used in StudentFeeForm class
+
+
+
+
